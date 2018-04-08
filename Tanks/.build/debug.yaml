@@ -1,0 +1,43 @@
+client:
+  name: swift-build
+tools: {}
+targets:
+  "main": ["<Tanks.module>","<Tanks.exe>"]
+  "test": ["<Tanks.module>","<Tanks.exe>"]
+  "Tanks.module": ["<Tanks.module>"]
+  "Tanks.exe": ["<Tanks.exe>"]
+default: "main"
+commands: 
+  "<C.Tanks.exe>":
+    tool: phony
+    inputs: ["/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/Tanks"]
+    outputs: ["<Tanks.exe>"]
+
+  "<C.Tanks.module>":
+    tool: phony
+    inputs: ["/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/Tanks.swiftmodule"]
+    outputs: ["<Tanks.module>"]
+
+  "C.Tanks.exe":
+    tool: shell
+    description: "Linking ./.build/x86_64-unknown-linux/debug/Tanks"
+    inputs: ["/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/Tanks.build/main.swift.o","/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/Tanks.build/Print.swift.o"]
+    outputs: ["/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/Tanks"]
+    args: ["/home/learnswift/Downloads/swift-4.0.2-RELEASE-ubuntu14.04/usr/bin/swiftc","-target","x86_64-unknown-linux","-sdk","/","-g","-L","/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug","-o","/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/Tanks","-module-name","Tanks","-emit-executable","-Xlinker","-rpath=$ORIGIN","/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/Tanks.build/main.swift.o","/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/Tanks.build/Print.swift.o"]
+
+  "C.Tanks.module":
+    tool: swift-compiler
+    executable: "/home/learnswift/Downloads/swift-4.0.2-RELEASE-ubuntu14.04/usr/bin/swiftc"
+    module-name: "Tanks"
+    module-output-path: "/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/Tanks.swiftmodule"
+    inputs: ["/home/learnswift/Programs/Tanks/main.swift","/home/learnswift/Programs/Tanks/Print.swift"]
+    outputs: ["/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/Tanks.build/main.swift.o","/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/Tanks.build/Print.swift.o","/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/Tanks.swiftmodule"]
+    import-paths: ["/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug"]
+    temps-path: "/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/Tanks.build"
+    objects: ["/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/Tanks.build/main.swift.o","/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/Tanks.build/Print.swift.o"]
+    other-args: ["-swift-version","3","-target","x86_64-unknown-linux","-sdk","/","-Onone","-g","-enable-testing","-j8","-DSWIFT_PACKAGE","-module-cache-path","/home/learnswift/Programs/Tanks/.build/x86_64-unknown-linux/debug/ModuleCache"]
+    sources: ["/home/learnswift/Programs/Tanks/main.swift","/home/learnswift/Programs/Tanks/Print.swift"]
+    is-library: false
+    enable-whole-module-optimization: false
+    num-threads: "8"
+

@@ -1,0 +1,6 @@
+version: "Swift version 4.0.2 (swift-4.0.2-RELEASE)"
+options: "092a4aa64ceda3091c2c0f05a27d15da"
+build_time: [1522954043, 351009409]
+inputs:
+  "/home/learnswift/Programs/Tanks/main.swift": [1522953523, 0]
+  "/home/learnswift/Programs/Tanks/Print.swift": !private [1522954039, 0]
