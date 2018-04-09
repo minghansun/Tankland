@@ -1,0 +1,6 @@
+version: "Swift version 4.0.2 (swift-4.0.2-RELEASE)"
+options: "76a0cf43ca3034ffc5592f5644a2af92"
+build_time: [1523297136, 388078799]
+inputs:
+  "/home/learnswift/Programs/Tankland/main.swift": [1523219151, 0]
+  "/home/learnswift/Programs/Tankland/Print.swift": [1523297045, 0]

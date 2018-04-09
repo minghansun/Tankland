@@ -1,0 +1,17 @@
+{
+  "": {
+    "swift-dependencies": "/home/learnswift/Programs/Tankland/.build/x86_64-unknown-linux/debug/Tankland.build/master.swiftdeps"
+  },
+  "/home/learnswift/Programs/Tankland/main.swift": {
+    "dependencies": "/home/learnswift/Programs/Tankland/.build/x86_64-unknown-linux/debug/Tankland.build/main.d",
+    "object": "/home/learnswift/Programs/Tankland/.build/x86_64-unknown-linux/debug/Tankland.build/main.swift.o",
+    "swiftmodule": "/home/learnswift/Programs/Tankland/.build/x86_64-unknown-linux/debug/Tankland.build/main~partial.swiftmodule",
+    "swift-dependencies": "/home/learnswift/Programs/Tankland/.build/x86_64-unknown-linux/debug/Tankland.build/main.swiftdeps"
+  },
+  "/home/learnswift/Programs/Tankland/Print.swift": {
+    "dependencies": "/home/learnswift/Programs/Tankland/.build/x86_64-unknown-linux/debug/Tankland.build/Print.d",
+    "object": "/home/learnswift/Programs/Tankland/.build/x86_64-unknown-linux/debug/Tankland.build/Print.swift.o",
+    "swiftmodule": "/home/learnswift/Programs/Tankland/.build/x86_64-unknown-linux/debug/Tankland.build/Print~partial.swiftmodule",
+    "swift-dependencies": "/home/learnswift/Programs/Tankland/.build/x86_64-unknown-linux/debug/Tankland.build/Print.swiftdeps"
+  }
+}

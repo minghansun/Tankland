@@ -1,2 +1,2 @@
 import PackageDescription
-let package = Package(name: "Tanks")
+let package = Package(name: "Tankland")
