@@ -1,6 +1,8 @@
 import Foundation
 import Glibc
 
+//am I supposed to edite this file this way
+
 struct Coord{
     let x: Int
     let y: Int
